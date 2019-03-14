@@ -2,20 +2,20 @@
 
 # Database
   -- PostgreSQL<br/>
-  -- db_name : upgrad_db . 
-  -- myusername : tkalani . 
-  -- mypassword : tkalani . 
+  -- db_name : upgrad_db<br/>
+  -- myusername : tkalani<br/>
+  -- mypassword : tkalani<br/>
 
 # Requirements
-  -- Python 3 . 
-  -- PostgreSQL  
+  -- Python 3<br/>
+  -- PostgreSQL<br/>
   
-  -- run . 
-      -- pip install psycopg2 . 
+  -- run<br/>
+      -- pip install psycopg2<br/>
 # Mac-OS Commmands to run:
-  -- $ createdb db_name . 
-       (or $ sudo -u postgres createdb upgrad_db) .  
+  -- $ createdb db_name<br/>
+       (or $ sudo -u postgres createdb upgrad_db)<br/>
        
-  -- CREATE ROLE myusername WITH LOGIN PASSWORD 'mypassword';   
-  -- GRANT ALL PRIVILEGES ON DATABASE db_name TO myusername;  
-  -- ALTER USER myusername CREATEDB;  
+  -- CREATE ROLE myusername WITH LOGIN PASSWORD 'mypassword';<br/>  
+  -- GRANT ALL PRIVILEGES ON DATABASE db_name TO myusername;  <br/>
+  -- ALTER USER myusername CREATEDB;  <br/>
