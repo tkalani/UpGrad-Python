@@ -1,0 +1,33 @@
+{% extends 'Schedule/main.html' %}
+{% block title %}ADD SCHEDULE{% endblock %}
+{% block body %}
+    ADD SCHEDULE FORM
+
+    <br><br>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <form action="{% url 'Schedule:add-schedule' %}" method="POST">
+        {% csrf_token %}
+        <label for="title">Topic : </label>
+        <input type="text" name="schedule_topic" placeholder="Topic" required class="form-control"><br>
+
+        <label for="title">Date : </label>
+        <input type="date" name="schedule_date" placeholder="Date" required class="form-control"><br>
+
+        <label for="title">Start Time : </label>
+        <input type="time" name="schedule_start_time" placeholder="Start Time" required class="form-control"><br>
+
+        <label for="title">End Time : </label>
+        <input type="time" name="schedule_end_time" placeholder="End Time" required class="form-control"><br>
+        <button type="submit" class="btn btn-success btn-block">ADD SCHEDULE</button>
+    </form>
+
+    <br><br>
+    <a href="{% url 'Schedule:dashboard' %}">Go back to Dashboard</a>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'Schedule/main.html' %}
+{% block title %}UPDATE SCHEDULE{% endblock %}
+{% block body %}
+    UPDATE SCHEDULE FORM
+
+    <br><br>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <form action="{% url 'Schedule:update-schedule' schedule.id %}" method="POST">
+        {% csrf_token %}
+        <label for="title">Topic : </label>
+        <input type="text" name="schedule_topic" placeholder="Topic" required value="{{schedule.topic}}" class="form-control"><br>
+
+        <label for="title">Date : </label>
+        <input type="date" name="schedule_date" placeholder="Date" required value="{{schedule.date|date:'Y-m-d'}}" class="form-control"><br>
+
+        <label for="title">Start Time : </label>
+        <input type="time" name="schedule_start_time" placeholder="Start Time" required value="{{schedule.start_time|date:'H:i'}}" class="form-control"><br>
+
+        <label for="title">End Time : </label>
+        <input type="time" name="schedule_end_time" placeholder="End Time" required value="{{schedule.end_time|date:'H:i'}}" class="form-control"><br>
+        <button type="submit" class="btn btn-success btn-block">UPDATE SCHEDULE</button>
+    </form>
+
+    <br><br>
+    <a href="{% url 'Schedule:dashboard' %}">Go back to Dashboard</a>
+{% endblock %}
