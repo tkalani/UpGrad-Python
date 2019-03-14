@@ -1,7 +1,7 @@
 # UpGrad-Python
 
 # Database
-  -- PostgreSQL . 
+  -- PostgreSQL<br/>
   -- db_name : upgrad_db . 
   -- myusername : tkalani . 
   -- mypassword : tkalani . 
